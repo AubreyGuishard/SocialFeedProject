@@ -11,27 +11,15 @@ import './App.css';
 
 function App() {
 
-  const [name, setName] = useState([{Name: "Aubrey", Post: "This is a Test!"}])
+  const [posts, setPosts] = useState([{Name: "Aubrey", Post: "This is a Test!"}, {Name: "Aubre", Post: "This is a Test!!"}])
   return (
     <div className="App">
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Post</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              Aubrey 
-            </td>
-            <td>
-              This is a test
-            </td>
-          </tr>
-        </tbody>
-      </table>
+     <section id='post'>
+      <NavBar/>
+      <h3>Post</h3>
+      <Post/>
+      <PostList posts={posts}/>
+     </section>
     </div>
   );
 }
