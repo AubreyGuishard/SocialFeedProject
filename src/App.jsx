@@ -11,13 +11,20 @@ import './App.css';
 
 function App() {
 
-  const [posts, setPosts] = useState([{Name: "Aubrey", Post: "This is a Test!"}, {Name: "Aubre", Post: "This is a Test!!"}])
+  const [posts, setPosts] = useState([{name: "Aubrey", post: "This is a Test!"}, {Name: "Aubre", Post: "This is a Test!!"}])
+ 
+  function addNewEntry(e){
+    let tempEntries = [e,...posts];
+    
+    setPosts(tempEntries);
+  }
+
   return (
     <div className="App">
      <section id='post'>
       <NavBar/>
       <h3>Post</h3>
-      <Post/>
+      <Post addNewEntryProperty={addNewEntry}/>
       <PostList posts={posts}/>
      </section>
     </div>

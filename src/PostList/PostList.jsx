@@ -1,10 +1,10 @@
 import React from "react";
 
 const PostList = (props) => {
-   let mappedPost = props.posts.map(element => {
+   let mappedPost = props.posts.map(post => {
     return (<div>
-        <h3>{element.Name}</h3>
-        <p><h4>{element.Post}</h4></p>
+        <h3>{post.name}</h3>
+        <p>{post.post}</p>
     </div>)
    }) 
     return ( <div>

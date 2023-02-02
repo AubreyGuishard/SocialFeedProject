@@ -4,9 +4,14 @@ const Post = props => {
     const [name, setName] = useState('')
     const [post, setPost] = useState('')
 
-    const handleSubmit = e => {
+    function handleSubmit(e){
         e.preventDefault();
-        console.log(e);
+       let newEntry = {
+        name: name,
+        post: post
+       };
+       console.log(newEntry);
+       props.addNewEntryProperty(newEntry)
     };
 
     const handleName = e => {
@@ -21,7 +26,7 @@ const Post = props => {
 
 
     return ( 
-    <post onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
         <div>
             <label htmlFor="">Name</label>
             <input type="text" value={name} onChange={handleName} />
@@ -31,7 +36,7 @@ const Post = props => {
             <input type="text" value={post} onChange={handlePost}/>
         </div>
         <button type="submit">create</button>
-    </post> );
+    </form> );
 }
  
 export default Post;
