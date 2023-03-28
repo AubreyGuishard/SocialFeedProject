@@ -5,6 +5,8 @@ const PostList = (props) => {
     return (<div>
         <h3>{post.name}</h3>
         <p>{post.post}</p>
+        <button>Like</button>
+        <button>Dislike</button>
     </div>)
    }) 
     return ( <div>
