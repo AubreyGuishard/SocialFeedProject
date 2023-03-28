@@ -1,13 +1,10 @@
 import React from "react";
-
+import Post from "../Post/Post";
 const PostList = (props) => {
    let mappedPost = props.posts.map(post => {
-    return (<div>
-        <h3>{post.name}</h3>
-        <p>{post.post}</p>
-        <button>Like</button>
-        <button>Dislike</button>
-    </div>)
+    return (
+        <Post post={post}/>
+    )
    }) 
     return ( <div>
         {mappedPost}

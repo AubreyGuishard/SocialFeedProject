@@ -11,7 +11,7 @@ import './App.css';
 
 function App() {
 
-  const [posts, setPosts] = useState([{name: "Aubrey", post: "This is a Test!"}, {Name: "Aubre", Post: "This is a Test!!"}])
+  const [posts, setPosts] = useState([{name: "Aubrey", post: "This is a Test!"}, {name: "Aubre", post: "This is a Test!!"}])
  
   function addNewEntry(e){
     let tempEntries = [e,...posts];

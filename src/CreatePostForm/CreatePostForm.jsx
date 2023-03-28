@@ -10,18 +10,18 @@ const CreatePostForm = (props) => {
         name: name,
         post: post
        };
-       console.log(newEntry);
+       
        props.addNewEntryProperty(newEntry)
     };
 
     const handleName = e => {
         setName(e.target.value);
-        console.log(e.target.value);
+       
     };
 
     const handlePost = e => {
         setPost(e.target.value);
-        console.log(e.target.value);
+       
     };
 
 
