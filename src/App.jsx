@@ -24,7 +24,7 @@ function App() {
      <section id='post'>
       <NavBar/>
       <h3>Post</h3>
-      <Post addNewEntryProperty={addNewEntry}/>
+      <CreatePostForm addNewEntryProperty={addNewEntry}/>
       <PostList posts={posts}/>
      </section>
     </div>
